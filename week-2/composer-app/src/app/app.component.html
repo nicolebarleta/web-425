@@ -1,0 +1,42 @@
+<!--
+============================================
+; Title:  Assignment 2.4 - Routing in Action
+; Author: Professor Krasso
+; Date: 11 January 2021
+; Modified By: Marie Nicole Barleta
+; Description: Combination of angular routing and data binding
+; This file is the main file that shows
+;===========================================
+
+
+-->
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="/composer-list">Composer List</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/about">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/contact">Contact Us</a>
+    </li>
+  </ul>
+</nav>
+
+<div role="main" class="container">
+  <br /><br />
+
+  <h2>{{ assignment }}</h2>
+
+  <br /><br />
+  <div class="row">
+    <div class="col-sm-12">
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
