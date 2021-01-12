@@ -8,11 +8,11 @@
 
 
 import { Component, OnInit } from '@angular/core';
-
+/** Composer class with two fields */
 export default class Composer {
   fullName: string;
   genre: string;
-
+/** Constructor that accepts two parameters */
   constructor(fullName: string, genre: string) {
     this.fullName = fullName;
     this.genre = genre;
@@ -26,7 +26,12 @@ export default class Composer {
 })
 export class ComposerListComponent implements OnInit {
 
+  /**  Composers variable is declared with an Array of <Composer> */
   composers: Array<Composer>;
+
+  /** Components constructors with a new array
+   * with 5 new different objects
+  */
 
   constructor() {
     this.composers = [

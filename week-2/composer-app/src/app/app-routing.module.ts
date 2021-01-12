@@ -14,7 +14,13 @@ import { ComposerListComponent } from './composer-list/composer-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 
-const routes: Routes = [
+
+/**
+ * These are the routes created to link with their respective page's
+ * /composer-list page is the specified index page
+ */
+
+ const routes: Routes = [
   {
     path: '',
     redirectTo: '/composer-list',
@@ -35,6 +41,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
+
+  /**
+ * Routed to the created routes variable
+ */
+
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })

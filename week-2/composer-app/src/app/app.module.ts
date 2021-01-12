@@ -18,6 +18,10 @@ import { ComposerListComponent } from './composer-list/composer-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 
+
+/**
+ * This is where all the components of this app is declared
+ */
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +29,10 @@ import { AboutComponent } from './about/about.component';
     ContactComponent,
     AboutComponent
   ],
+
+/**
+ * In this case we used AppRoutingModule for navigation purposes
+ */
   imports: [
     BrowserModule,
     AppRoutingModule
