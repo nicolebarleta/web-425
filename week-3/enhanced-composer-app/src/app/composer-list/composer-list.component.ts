@@ -8,7 +8,9 @@
 
 
 import { Component, OnInit } from '@angular/core';
+//imported from composer.interface.ts file
 import { IComposer } from '../composer.interface';
+// imported from composer.class.ts file
 import { Composer} from '../composer.class';
 @Component({
   selector: 'app-composer-list',
@@ -16,9 +18,11 @@ import { Composer} from '../composer.class';
   styleUrls: ['./composer-list.component.css']
 })
 export class ComposerListComponent implements OnInit {
+
+  // Objects retrieved from composer.class.ts
   composers: Array<IComposer>;
 
-  /** Components constructors with a new array
+  /** Components constructors with an array
    * with 5 new different objects
   */
 
