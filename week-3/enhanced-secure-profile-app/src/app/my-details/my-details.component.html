@@ -1,0 +1,30 @@
+<!--
+============================================
+; Title:  my-details.component.html
+; Author: Professor Krasso
+; Date: 18 January 2021
+; Modified By: Marie Nicole Barleta
+; Description: Contains the list details that shows in home page
+;===========================================
+--->
+
+<!--
+; Objects are retrieved from my-details.component.ts and data binded in a list form
+-->
+
+<ul class="list-group">
+    <li class="list-group-item">Name: {{ myProfile.fullName }}</li>
+    <li class="list-group-item">Favorite food: {{ myProfile.favoriteFood }}</li>
+    <li class="list-group-item">Favorite colors: {{ myProfile.favoriteColor }}</li>
+
+<!--
+; ngFor looping keywords from my-details components file
+; the words are in an array form
+-->
+<li class="list-group-item">
+  Keywords:
+  <span *ngFor="let word of myProfile.keywords">
+    {{ word }}
+  </span>
+</li>
+</ul>
