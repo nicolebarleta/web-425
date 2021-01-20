@@ -1,3 +1,11 @@
+/**
+ * Title: app.component.ts
+ * Author: Professor Krasso
+ * Date: 19 January 2021
+ * Modified by: Marie Nicole Barleta
+ * Description: App component
+ */
+
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
@@ -19,7 +27,7 @@ describe('AppComponent', () => {
   it(`should have as title 'enhanced-profile-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.assignment).toEqual('enhanced-profile-app');
+    expect(app.title).toEqual('enhanced-profile-app');
   });
 
   it('should render title', () => {

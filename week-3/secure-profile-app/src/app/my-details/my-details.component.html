@@ -1,8 +1,27 @@
+<!--
+============================================
+; Title:  app.component.html
+; Author: Professor Krasso
+; Date: 19 January 2021
+; Modified By: Marie Nicole Barleta
+; Description: my details component
+; where all details are located
+;===========================================
+--->
+
+<!--
+; Objects are retrieved from my-details.component.ts and data binded in a list form
+-->
+
 <ul class="list-group">
     <li class="list-group-item">Name: {{ myProfile.fullName }}</li>
     <li class="list-group-item">Favorite food: {{ myProfile.favoriteFood }}</li>
     <li class="list-group-item">Favorite colors: {{ myProfile.favoriteColor }}</li>
 <li class="list-group-item">
+
+<!--
+; ngFor looping the word from keywords constructor in my-details component file
+-->
   Keywords:
   <span *ngFor="let word of myProfile.keywords">
     {{ word }}

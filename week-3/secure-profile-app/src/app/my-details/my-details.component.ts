@@ -2,6 +2,7 @@
  * Title: my-details.component.ts
  * Author: Professor Krasso
  * Date: 11 January 2021
+ * Modified by: Marie Nicole Barleta
  * Description: My details component
  */
 
@@ -11,6 +12,8 @@ export default class Person {
   fullName: string;
   favoriteFood: string;
   favoriteColor: string;
+
+// the keywords array is declared here
   keywords = [
     "#TypeScript", "#2020", "#CodingWithAngular", "#ngOmaha"
   ]
@@ -30,7 +33,7 @@ export default class Person {
 export class MyDetailsComponent implements OnInit {
 
   myProfile: Person;
-
+// this is where the details from the Person is declared
   constructor() {
     this.myProfile = new Person("Marie Nicole Barleta", "Filipino Food", "Red and Black");
     this.myProfile.toString();

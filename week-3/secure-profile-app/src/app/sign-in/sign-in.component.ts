@@ -1,7 +1,8 @@
 /**
  * Title: sign-in.component.ts
  * Author: Professor Krasso
- * Date: 22 April 2020
+ * Date: 19 January 2021
+ * Modified by: Marie Nicole Barleta
  * Description: Sign-in component (sign-in page)
  */
 

@@ -1,7 +1,8 @@
 /**
  * Title: app.component.ts
  * Author: Professor Krasso
- * Date: 21 April 2020
+ * Date: 19 January 2021
+ * Modified by: Marie Nicole Barleta
  * Description: App component
  */
 

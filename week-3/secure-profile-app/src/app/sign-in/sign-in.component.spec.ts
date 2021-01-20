@@ -1,3 +1,11 @@
+/**
+ * Title: sign-in.component.ts
+ * Author: Professor Krasso
+ * Date: 19 January 2021
+ * Modified by: Marie Nicole Barleta
+ * Description: Sign-in component (sign-in page)
+ */
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SignInComponent } from './sign-in.component';

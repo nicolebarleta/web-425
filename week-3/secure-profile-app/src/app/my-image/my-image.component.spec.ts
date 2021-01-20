@@ -1,3 +1,12 @@
+/**
+ * Title: my-image.component.ts
+ * Author: Professor Krasso
+ * Date: 19 January 2021
+ * Modified by: Marie Nicole Barleta
+ * Description: my image component
+ */
+
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MyImageComponent } from './my-image.component';
