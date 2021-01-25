@@ -1,0 +1,52 @@
+<!--
+============================================
+; Title:  Assignment 2.4 - Routing in Action
+; Author: Professor Krasso
+; Date: 11 January 2021
+; Modified By: Marie Nicole Barleta
+; Description: Combination of angular routing and data binding
+; This file is the main file that shows
+;===========================================
+
+
+-->
+
+<!--
+  ;This is where the linked navigation bar for the whole application
+  ;As you can see routerLink is used in the a tag and the specific page is stated
+-->
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="/composer-list">Composer List</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/about">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/contact">Contact Us</a>
+    </li>
+  </ul>
+</nav>
+
+<div role="main" class="container">
+  <br /><br />
+<!--
+  ;This heading statement will be shows in every page in this application
+  ; In this case I put the Assignment number and name
+-->
+  <h2>{{ assignment }}</h2>
+
+  <br /><br />
+  <div class="row">
+    <div class="col-sm-12">
+      <div>
+        <!--
+          This is where the clicked page will appear with the Navigation bar and Heading
+        -->
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
