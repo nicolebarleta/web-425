@@ -1,0 +1,57 @@
+
+<!--
+; Title:  composer-list.component.html
+; Author: Professor Krasso
+; Date: 25 January 2021
+; Modified By: Marie Nicole Barleta
+; Description: This is where the composer lists are located
+*/
+-->
+
+<div class="row">
+  <div class="col-sm-12">
+
+    <!--
+      ; Search field to find composers by name
+      ; formControl directive is added for search functions to work
+    -->
+
+    <div class="txtSearch">
+      <input type="text" id="txtSearch" class="form-control" [formControl]="txtSearchControl" placeholder="Search by name in lowercase only" />
+    </div>
+
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <tr>
+
+     <!-- This is where the left side of the content of composer list table -->
+     <th scope="col">Composer ID</th>
+
+     <!-- This is where the middle side of the content of composer list table -->
+     <th scope="col">Full name</th>
+
+     <!-- This is where the right side of the content of composer list table -->
+     <th scope="col">Genre</th>
+        </tr>
+      </thead>
+
+         <!--
+        ; ngFor looping over the array of composers from
+        ; the constructor object located in composer-list.component.ts
+        ; and each link is routed to composer-details whenever the user click
+        ; on each composerId it is directed to their respective object.
+        ; The async pipe is added to subscribe to the observable
+        ; to return the latest value it has emitted.
+      -->
+
+      <tbody *ngFor="let composer of composers | async">
+        <tr>
+          <td scope="row"> <a routerLink="/composer-details/{{composer.composerId}}">{{ composer.composerId }}</a></td>
+          <td>{{ composer.fullName }}</td>
+          <td>{{ composer.genre }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

@@ -1,0 +1,28 @@
+<!--
+; Title:  Exercise 2.4 - Routing in Action
+; Author: Professor Krasso
+; Date: 18 January 2021
+; Modified By: Marie Nicole Barleta
+; Description: About the composer
+; This is where all the composer details are
+*/
+-->
+
+<div class="row">
+
+  <div class="col-sm-12">
+
+      <ul class="list-group">
+
+<!-- Objects are retrieved from the composer.class.ts and data binded in a list form -->
+
+          <li class="list-group-item">Composer ID: {{ composer.composerId }}</li>
+          <li class="list-group-item">Full name: {{ composer.fullName }}</li>
+          <li class="list-group-item">Genre: {{ composer.genre }}</li>
+      </ul>
+      <br />
+
+<!-- Router linked to go back to list of composers page -->
+      <a routerLink="/composer-list" class="float-right">Return to Composers</a>
+  </div>
+</div>
