@@ -16,6 +16,11 @@ import { IWishlistItem } from '../wishlist-item.interface';
 })
 export class WishlistCreateComponent implements OnInit {
 
+  /**
+   * This is where the Output property is declared
+   * it will be emit in the IWishlistItem variable
+  */
+
   @Output() addItemEmitter = new EventEmitter<IWishlistItem>();
 
   item: IWishlistItem;

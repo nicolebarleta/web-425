@@ -1,3 +1,13 @@
+/*
+============================================
+; Title:  environment.ts
+; Author: Professor Krasso
+; Date: 08 February 2021
+; Modified By: Marie Nicole Barleta
+; Description: Environment ts file
+;===========================================
+*/
+
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.

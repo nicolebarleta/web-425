@@ -10,11 +10,15 @@
 
 <div fxLayout="column">
 
-
+<!--
+  The wishlist will update from the user input in wishlist-create
+-->
   <app-wishlist-create fxFlex (addItemEmitter)='updateItemsHandler($event)'></app-wishlist-create>
 
   <br /><br />
-
+<!--
+  It's looping over the number of items added
+-->
   <div>
     <mat-list fxFlex *ngIf="items && items.length > 0">
       <mat-list-item *ngFor="let item of items">
@@ -22,7 +26,9 @@
         <div mat-line>Authors: {{ item.authors }}</div>
       </mat-list-item>
     </mat-list>
-
+<!--
+  It's the indicator if there is no item in the wishlist
+-->
     <div fxFlex *ngIf="!items || items.length === 0">
       <h2 style="text-align: center">Your wishlist is empty.</h2>
     </div>

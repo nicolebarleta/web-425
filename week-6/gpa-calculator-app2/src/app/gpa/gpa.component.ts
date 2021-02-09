@@ -1,3 +1,14 @@
+/*
+ ============================================
+; Title:  gpa.component.spec.ts
+; Author: Professor Krasso
+; Date: 08 February 2021
+; Modified By: Marie Nicole Barleta
+; Description: gpa component ts file
+;===========================================
+ */
+
+
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -7,6 +18,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class GpaComponent implements OnInit {
 
+  // Input statement for gpaTotal
   @Input() gpaTotal!: number;
 
   constructor() { }

@@ -22,6 +22,10 @@ export class BookDetailsDialogComponent implements OnInit {
 
   book: IBook;
 
+/*
+* This is where the angular material dialog is injected
+* to show the book details once the user click on the ISBN
+*/
   constructor(private dialogRef: MatDialogRef<BookDetailsDialogComponent>,
     @Inject(MAT_DIALOG_DATA) data: any) {
     this.book = data.book;

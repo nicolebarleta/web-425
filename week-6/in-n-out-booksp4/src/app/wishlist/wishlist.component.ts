@@ -22,7 +22,7 @@ export class WishlistComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+//This is where the the parent component is where all the data will be shown
   updateItemsHandler(item: IWishlistItem) {
     console.log('Inside the wishlist.component.ts (parent) - updateItemsHandler() function');
     console.log(item);

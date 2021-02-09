@@ -1,6 +1,26 @@
+<!--
+  /*
+ ============================================
+; Title:  home.component.html
+; Author: Professor Krasso
+; Date: 08 February 2021
+; Modified By: Marie Nicole Barleta
+; Description: home component html file
+;===========================================
+ */
+-->
+
+
 <div fxLayout="row wrap" fxLayoutGap="20px">
   <div class="grade-form" fxFlex>
     <mat-card class="mat-elevation-z8">
+
+<!--
+  ; This is the form where the users,
+  ; input the course and the grade per course
+  ; it will be read as an entry grade in the ts file.
+  ; the save entry function will work once the user click submit
+-->
 
       <mat-card-title>Grade Entry</mat-card-title>
 
@@ -25,6 +45,13 @@
     </mat-card>
   </div>
 
+
+<!--
+  ; Clears all the data that was entered,
+  ; once the "Clear Transcript" button is clicked
+  ; the function loops over all the transcript entries and will be cleared
+-->
+
   <div class="grade-summary" fxFlex>
     <button mat-button color="primary" (click)="clearEntries()">Clear Transcript</button>
     <mat-card class="mat-elevation-z8">
@@ -39,6 +66,11 @@
 
 <br /><br />
 
+
+<!--
+  ; Calculating gpa result once the user click on the "Calculate GPA" button,
+  ; The gpa total will be shown and is calculated from the ts file
+-->
 <div fxLayout="column" fxLayoutGap="20px">
   <div fxFlex class="gpa">
     <button mat-button color="primary" (click)="calculateResults()">Calculate GPA</button>

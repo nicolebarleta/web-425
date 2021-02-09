@@ -17,7 +17,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 
-
+// These are the routes that are connected in navigation bar
 const routes: Routes = [
   {
     path: '',

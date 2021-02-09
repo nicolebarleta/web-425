@@ -1,3 +1,16 @@
+/*
+ ============================================
+; Title:  app-routing.module.ts
+; Author: Professor Krasso
+; Date: 08 February 2021
+; Modified By: Marie Nicole Barleta
+; Description: App routing module
+; This is where all navigation path is connected
+;===========================================
+ */
+
+
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BaseLayoutComponent } from './base-layout/base-layout.component';

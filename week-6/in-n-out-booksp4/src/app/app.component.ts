@@ -2,7 +2,7 @@
  * ============================================
 ; Title:  app.component.ts
 ; Author: Professor Krasso
-; Date: 01 February 2021
+; Date: 08 February 2021
 ; Modified By: Marie Nicole Barleta
 ; Description: App component
 ;===========================================
@@ -18,6 +18,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   assignment: string;
+
+//Assignment value
 
   constructor() {
     this.assignment = 'Exercise 6.2 - Input/Output Properties, Part 1'

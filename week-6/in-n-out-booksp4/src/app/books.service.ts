@@ -2,7 +2,7 @@
  * ============================================
 ; Title:  book.service.ts
 ; Author: Professor Krasso
-; Date: 01 February 2021
+; Date: 08 February 2021
 ; Modified By: Marie Nicole Barleta
 ; Description: Service class for book objects
 ;===========================================
