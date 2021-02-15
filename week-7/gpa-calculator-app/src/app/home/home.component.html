@@ -1,0 +1,76 @@
+<!--
+  /*
+ ============================================
+; Title:  home.component.html
+; Author: Professor Krasso
+; Date: 08 February 2021
+; Modified By: Marie Nicole Barleta
+; Description: home component html file
+;===========================================
+ */
+-->
+
+<div fxLayout="row wrap" fxLayoutGap="20px">
+  <div class="grade-form" fxFlex>
+    <mat-card class="mat-elevation-z8">
+
+      <mat-card-title>Grade Entry</mat-card-title>
+<!--
+  ; This is a reactive form from Angular,
+  ; with this it will be easier and faster to expand if ever there
+  ; will be changes in the future.
+  ; The user needs to put a valid entry to be able to be saved.
+-->
+      <mat-card-content>
+        <form fxLayout="column" fxLayoutGap="16px" [formGroup]="transcriptForm" (ngSubmit)="onSubmit($event); transcriptForm.reset()">
+          <mat-form-field fxFlex appearance="fill">
+            <mat-label>Course</mat-label>
+            <input type="text" name="txtCourse" required id="txtCourse" matInput formControlName="course" />
+          </mat-form-field>
+
+          <mat-form-field fxFlex appearance="fill">
+            <mat-label>Grade</mat-label>
+            <mat-select formControlName="grade" required name="selectGrade">
+              <mat-option *ngFor="let grade of selectableGrades" [value]="grade">
+                {{ grade }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <button type="submit" [disabled]="!transcriptForm.valid" mat-raised-button color="primary">Save</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+<!--
+  ; The transcript is retrieved from the saved entries,
+  ; it's ngFor looping in the transcriptEntries from the home.component.ts file.
+  ; Clear transcript button will remove all entered entries.
+-->
+  <div class="grade-summary" fxFlex>
+    <button mat-button color="primary" (click)="clearEntries()">Clear Transcript</button>
+    <mat-card class="mat-elevation-z8">
+      <mat-card-title>Transcript</mat-card-title>
+      <mat-card-content>
+        <app-grade-summary *ngFor="let entry of transcriptEntries" [course]="entry.course" [grade]="entry.grade"></app-grade-summary>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</div>
+
+<br /><br />
+<!--
+  ; The calculate GPA button will calculate the average of the entered entries
+  ; it calls the calculateResults function from the home.component.ts file.
+-->
+<div fxLayout="column" fxLayoutGap="20px">
+  <div fxFlex class="gpa">
+    <button mat-button color="primary" (click)="calculateResults()">Calculate GPA</button>
+
+    <mat-card class="mat-elevation-z8">
+      <mat-card-title style="text-align: center;">
+        GPA: <app-gpa [gpaTotal]="gpaTotal"></app-gpa>
+      </mat-card-title>
+    </mat-card>
+  </div>
+</div>
