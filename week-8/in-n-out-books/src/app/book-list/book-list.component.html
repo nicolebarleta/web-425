@@ -1,0 +1,51 @@
+<!--
+============================================
+; Title:  book-list.component.html
+; Author: Professor Krasso
+; Date: 22 February 2021
+; Modified By: Marie Nicole Barleta
+; Description:  book-list component html file
+;===========================================
+-->
+
+
+<!-- Angular material spinner, the spinner shows
+    if the books are still loading and the data is not retrieved yet.
+-->
+<ng-container *ngIf="books.length === 0">
+  <mat-spinner class="spinner"></mat-spinner>
+</ng-container>
+
+<!-- Once the books is more than zero the following wil show up
+    ; The Top Favorite books with the number of length of the books entered in the array.
+-->
+<div *ngIf="books.length > 0">
+  <h2 class="green">Top {{books.length}} Favorite Books</h2>
+  <div class="grid-container">
+<!--
+  ngFor looping over the books and shows with mat-card angular material.
+-->
+    <ng-container *ngFor="let book of books">
+      <mat-card class="grid-container__item mat-elevation-z8">
+      <!-- The book title is linked and once cliked it will call
+            ; showBookDetails function through the isbn of the book
+      -->
+        <mat-card-title>
+          <a class="grid-container__ahref blue" (click)="showBookDetails(book.isbn)">{{book.title}}</a>
+        </mat-card-title> <br />
+        <!--
+          The mat-card content is consisted of each book's
+          ; ISBN, Pages and authors the authors names are
+          ; joined with a comma if it's multiple authors.
+        -->
+        <mat-card-content>
+          <mat-list>
+            <mat-list-item>ISBN: {{ book.isbn }}</mat-list-item>
+            <mat-list-item>Pages: {{ book.numOfPages }}</mat-list-item>
+            <mat-list-item>Authors: {{ book.authors.join(',')}}</mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </div>
+</div>

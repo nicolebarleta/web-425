@@ -1,0 +1,34 @@
+<!--
+============================================
+; Title:  book-details-dialog.component.html
+; Author: Professor Krasso
+; Date: 01 February 2021
+; Modified By: Marie Nicole Barleta
+; Description: This is where the details from the dialog box comes from
+;===========================================
+-->
+
+<!--
+ ;All information is coming from book details dialog component ts file.
+ ;Once the user click on the respective ISBN
+ ;the specific item will pop-up as a dialog box and in a mat-card angular material design.
+-->
+
+<mat-card>
+  <mat-card-title class="blue">
+    {{ book.title }}
+  </mat-card-title>
+  <br /><br />
+  <mat-card-content>
+    <div fxLayout="column" class="book-details">
+      <p>ISBN: {{ book.isbn }}</p>
+
+      <p>Description:<br /> {{ book.description }}</p>
+
+      <p>Authors:<br /> {{ book.authors.join(', ')}}</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="accent" matDialogClose="confirm">OK</button>
+  </mat-card-actions>
+</mat-card>

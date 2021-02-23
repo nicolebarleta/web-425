@@ -1,0 +1,43 @@
+/*
+============================================
+; Title:  book-list.component.scss
+; Author: Professor Krasso
+; Date: 22 February 2021
+; Modified By: Marie Nicole Barleta
+; Description: book-list component style
+;===========================================
+*/
+
+/*
+* This style is for grid container to have 20px gap
+* and 25 px padding. The display is in grid and
+* the columns template are in auto.
+*/
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto;
+  padding: 25px;
+}
+
+// Each item in grid container has 20 ps padding size and 30 px font size
+
+.grid-container__item {
+  padding: 20px;
+  font-size: 30px;
+}
+
+// The links are not decorated and has pointer curson on hover
+.grid-container__ahref {
+  text-decoration: none;
+  cursor: pointer;
+}
+// The links are underlined during hover
+.grid-container__ahref:hover {
+  text-decoration: underline;
+}
+// The spinner has top margin of 2% and left margin of 45%
+.spinner {
+  margin-top: 2%;
+  margin-left: 45%;
+}

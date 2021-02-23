@@ -1,0 +1,57 @@
+/*
+============================================
+; Title:  styles.scss
+; Author: Professor Krasso
+; Date: 01 February 2021
+; Modified By: Marie Nicole Barleta
+; Description: Main styles for application
+;===========================================
+
+*/
+
+
+//partial style is imported from theme scss file
+@import './theme';
+
+// Main style
+
+html, body {
+    height: 100%; }
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Default blue is declared for this application
+  .blue {
+    color: #2196f3;
+  }
+
+// Default green is declared for this application
+  .green {
+    color: #66BB6a;
+  }
+
+  .attribution-link {
+    text-decoration: none;
+    color: white;
+  }
+
+// Underline style whenever the user hovers ar any link in this app
+  .attribution-link:hover {
+    text-decoration: underline;
+  }
+
+  .card-title-icon {
+    text-align: center;
+  }
+
+// All mat icon class will have 72px font size
+  .card-title-icon, mat-icon {
+    font-size: 72px;
+  }
+
+// align center to be used within the body of a container
+  .align-center {
+    text-align: center;
+  }
